@@ -16,10 +16,10 @@ const Blog = () => {
       .then((res) => setBlogData(res.data));
   };
 
-  useEffect(() => getData(), [])
+  useEffect(() => getData(), []);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (content.length < 140) {
       setError(true);
@@ -28,11 +28,11 @@ const Blog = () => {
         author,
         content,
         date: Date.now(),
-      })
-      setError(false)
-      setAuthor("")
-      setContent("")
-      getData()
+      });
+      setError(false);
+      setAuthor("");
+      setContent("");
+      getData();
     }
   };
 
